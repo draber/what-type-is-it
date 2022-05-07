@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1651939969024" clover="3.2.0">
+  <project timestamp="1651939969024" name="All files">
+    <metrics statements="26" coveredstatements="25" conditionals="10" coveredconditionals="9" methods="17" coveredmethods="17" elements="53" coveredelements="51" complexity="0" loc="26" ncloc="26" packages="2" files="18" classes="18"/>
+    <package name="whats-the-type">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="whats-the-type.js" path="F:\htdocs\whats-the-type\whats-the-type.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="whats-the-type.modules">
+      <metrics statements="26" coveredstatements="25" conditionals="10" coveredconditionals="9" methods="17" coveredmethods="17"/>
+      <file name="getType.js" path="F:\htdocs\whats-the-type\modules\getType.js">
+        <metrics statements="10" coveredstatements="9" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="7" count="425" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="10" count="408" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="17" type="stmt"/>
+        <line num="13" count="391" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="391" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="17" type="stmt"/>
+        <line num="19" count="374" type="stmt"/>
+      </file>
+      <file name="isArray.js" path="F:\htdocs\whats-the-type\modules\isArray.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isBigInt.js" path="F:\htdocs\whats-the-type\modules\isBigInt.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isBoolean.js" path="F:\htdocs\whats-the-type\modules\isBoolean.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isDate.js" path="F:\htdocs\whats-the-type\modules\isDate.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isError.js" path="F:\htdocs\whats-the-type\modules\isError.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isFunction.js" path="F:\htdocs\whats-the-type\modules\isFunction.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isGenerator.js" path="F:\htdocs\whats-the-type\modules\isGenerator.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isMap.js" path="F:\htdocs\whats-the-type\modules\isMap.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isNull.js" path="F:\htdocs\whats-the-type\modules\isNull.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isNumber.js" path="F:\htdocs\whats-the-type\modules\isNumber.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isPlainObject.js" path="F:\htdocs\whats-the-type\modules\isPlainObject.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isRegExp.js" path="F:\htdocs\whats-the-type\modules\isRegExp.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isSet.js" path="F:\htdocs\whats-the-type\modules\isSet.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isString.js" path="F:\htdocs\whats-the-type\modules\isString.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isSymbol.js" path="F:\htdocs\whats-the-type\modules\isSymbol.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+      <file name="isUndefined.js" path="F:\htdocs\whats-the-type\modules\isUndefined.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="25" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

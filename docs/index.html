@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getType">getType</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isArray">isArray</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isBigInt">isBigInt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isBoolean">isBoolean</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isDate">isDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isError">isError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isFunction">isFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isGenerator">isGenerator</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isMap">isMap</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isNull">isNull</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isNumber">isNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isPlainObject">isPlainObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isRegExp">isRegExp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isSet">isSet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isString">isString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isSymbol">isSymbol</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isUndefined">isUndefined</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>What's the type?</h1>
+<p><img src="https://img.shields.io/github/license/draber/whats-the-type.svg" alt="">
+<img src="https://img.shields.io/github/package-json/v/draber/whats-the-type.svg?" alt="">
+<img src="https://img.shields.io/bundlephobia/min/whats-the-type.svg" alt=""></p>
+<p>This module works around the drawbacks of <code>typeof</code> in JavaScript.</p>
+<h2>Installation</h2>
+<pre class="prettyprint source lang-bash"><code>npm install whats-the-type
+</code></pre>
+<h2>Usage</h2>
+<p>What's the type comes with one detector, <code>getType()</code> and 16 confirmation functions, <code>isArray()</code>, <code>isBigint()</code>, <code>isBoolean()</code>, <code>isDate()</code>, <code>isError()</code>, <code>isFunction()</code>, <code>isGenerator()</code>, <code>isMap()</code>, <code>isNull()</code>, <code>isNumber()</code>, <code>isPlainObject()</code>, <code>isRegexp()</code>, <code>isSet()</code>, <code>isString()</code>, <code>isSymbol()</code> and <code>isUndefined()</code>.</p>
+<pre class="prettyprint source lang-javascript"><code>// import everything if you have a bunch of different types to check
+import detector from 'whats-the-type'; // note that whats-the-type is implemented as ESM and not in CJS
+
+// use `getType` if you don't know what type to expect
+import getType from 'whats-the-type/get-type.js';
+
+// use the `isType` functions if you want to confirm if a value is of a specific type
+import isString from 'whats-the-type/isString.js';
+</code></pre>
+<h3>getType()</h3>
+<pre class="prettyprint source lang-javascript"><code>// the detector always returns a string in lower case
+getType(['a', 'b', 'c']); // 'array'
+
+// use the import name if you imported everything
+detector.getType(123); // 'number'
+
+// generator functions are reported as 'generator'
+function* myGenerator() {}; // 'generator'
+
+// plain objects are reported as 'object'
+getType({}); // 'object'
+
+// custom classes are reported by their name
+class MyClass extends Object {};
+getType(new MyClass()); // 'myclass'
+</code></pre>
+<h3>isType()</h3>
+<pre class="prettyprint source lang-javascript"><code>isString('a'); // true
+isString(123); // false
+
+// Two of the function names are probaly not what you expect
+// isPlainObject() is a pretty established name and more specific than isObject()
+isPlainObject({}); // true
+
+// Generator functions return Generators, hence the name
+isGenerator(function* () {}); // true
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Sat May 07 2022 18:15:49 GMT+0200 (Central European Summer Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

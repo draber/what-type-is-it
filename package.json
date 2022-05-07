@@ -1,0 +1,44 @@
+{
+  "name": "whats-the-type",
+  "version": "1.0.0",
+  "description": "Type detection beyond `typeof`",
+  "main": "whats-the-type.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --warnings --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --coverage ./tests",
+    "docs": "jsdoc -c ./jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draber/whats-the-type.git"
+  },
+  "keywords": [
+    "isArray",
+    "isBigint",
+    "isBoolean",
+    "isDate",
+    "isError",
+    "isFunction",
+    "isGenerator",
+    "isMap",
+    "isNull",
+    "isNumber",
+    "isPlainObject",
+    "isRegexp",
+    "isSet",
+    "isString",
+    "isSymbol",
+    "isUndefined",
+    "getType"
+  ],
+  "author": "Dieter Raber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/draber/whats-the-type/issues"
+  },
+  "homepage": "https://github.com/draber/whats-the-type#readme",
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "minami": "^1.2.3"
+  }
+}
