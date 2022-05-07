@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/github/license/draber/whats-the-type.svg)
 ![](https://img.shields.io/github/package-json/v/draber/whats-the-type.svg?)
+![](https://img.shields.io/bundlephobia/min/whats-the-type.svg)
 
 This module works around the drawbacks of `typeof` in JavaScript.
 
@@ -56,3 +57,6 @@ isPlainObject({}); // true
 // Generator functions return Generators, hence the name
 isGenerator(function* () {}); // true
 ```
+
+
+Docs at [whats-the-type.netlify.app](https://whats-the-type.netlify.app/)

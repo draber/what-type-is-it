@@ -4,6 +4,11 @@ import getType from "./getType.js";
  * Check if a value is a regexp
  * @param {*} value The value to check
  * @returns {Boolean}
+ * @example
+ * const v1 = /regexp/;
+ * isRegExp(v2); // true
+ * const v3 = new RegExp("regexp", 'gi');
+ * isRegExp(v3); // true
  */
 const isRegExp = (value) => getType(value) === "regexp";
 
