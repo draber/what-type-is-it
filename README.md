@@ -2,7 +2,6 @@
 
 ![](https://img.shields.io/github/license/draber/whats-the-type.svg)
 ![](https://img.shields.io/github/package-json/v/draber/whats-the-type.svg?)
-![](https://img.shields.io/bundlephobia/min/whats-the-type.svg)
 
 This module works around the drawbacks of `typeof` in JavaScript.
 
@@ -22,7 +21,7 @@ import detector from 'whats-the-type'; // note that whats-the-type is implemente
 // use `getType` if you don't know what type to expect
 import getType from 'whats-the-type/get-type.js';
 
-// use the `isType` functions if you want to confirm if a value is of a specific type
+// use the `is<Type>` functions if you want to confirm if a value is of a specific type
 import isString from 'whats-the-type/isString.js';
 ```
 
@@ -35,7 +34,7 @@ getType(['a', 'b', 'c']); // 'array'
 detector.getType(123); // 'number'
 
 // generator functions are reported as 'generator'
-function* myGenerator() {}; // 'generator'
+getType(function* () {}); // 'generator'
 
 // plain objects are reported as 'object'
 getType({}); // 'object'
@@ -45,7 +44,7 @@ class MyClass extends Object {};
 getType(new MyClass()); // 'myclass'
 ```
 
-### isType()
+### is&lt;Type&gt;()
 ```javascript
 isString('a'); // true
 isString(123); // false

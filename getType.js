@@ -10,7 +10,6 @@
     if(value === null){
         return 'null';
     }
-    // The only scenario where you could go to this condition is if that condition wasn't there
     if(!value.constructor || !value.constructor.name){
         return 'unknown';
     }

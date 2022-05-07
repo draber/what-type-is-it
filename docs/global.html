@@ -316,7 +316,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isArray.js.html">isArray.js</a>, <a href="isArray.js.html#line8">line 8</a>
+        <a href="isArray.js.html">isArray.js</a>, <a href="isArray.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -421,6 +421,18 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = [];
+isArray(v1); // true 
+const v2 = new Array(9);
+isArray(v2); // true
+const v3 = Array.from([1, 2, 3], x => x + x));
+isArray(v3); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -472,7 +484,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isBigInt.js.html">isBigInt.js</a>, <a href="isBigInt.js.html#line8">line 8</a>
+        <a href="isBigInt.js.html">isBigInt.js</a>, <a href="isBigInt.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -577,6 +589,16 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const value = BigInt(123);
+isBigInt(value); // true
+getType(value) // "bigint"
+isNumber(value); // false</code></pre>
+
+</div>
 
 </div>
         
@@ -1096,7 +1118,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isFunction.js.html">isFunction.js</a>, <a href="isFunction.js.html#line8">line 8</a>
+        <a href="isFunction.js.html">isFunction.js</a>, <a href="isFunction.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -1201,6 +1223,21 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = function() {};
+isFunction(v1); // true 
+const v2 = new Function();
+isFunction(v2); // true
+const v3 = () => {};
+isFunction(v3); // true
+const v4 = function* generator(i) {};
+isFunction(v4); // false
+isGenerator(v4); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -1252,7 +1289,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isGenerator.js.html">isGenerator.js</a>, <a href="isGenerator.js.html#line8">line 8</a>
+        <a href="isGenerator.js.html">isGenerator.js</a>, <a href="isGenerator.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -1357,6 +1394,15 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const value = function* generator(i) {};
+isGenerator(value); // true
+isFunction(value); // false</code></pre>
+
+</div>
 
 </div>
         
@@ -1408,7 +1454,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isMap.js.html">isMap.js</a>, <a href="isMap.js.html#line8">line 8</a>
+        <a href="isMap.js.html">isMap.js</a>, <a href="isMap.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -1513,6 +1559,14 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = new Map();
+isMap(v1); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -1720,7 +1774,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isNumber.js.html">isNumber.js</a>, <a href="isNumber.js.html#line8">line 8</a>
+        <a href="isNumber.js.html">isNumber.js</a>, <a href="isNumber.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -1825,6 +1879,21 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = 1;
+isNumber(v1); // true
+const v2 = new Number(1);
+isNumber(v2); // true
+const v3 = 1.1;
+isNumber(v3); // true
+const v4 = 42n;
+isNumber(v4); // false
+isBigInt(v4); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -1876,7 +1945,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isPlainObject.js.html">isPlainObject.js</a>, <a href="isPlainObject.js.html#line8">line 8</a>
+        <a href="isPlainObject.js.html">isPlainObject.js</a>, <a href="isPlainObject.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -1981,6 +2050,15 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const value = {a:1, b:2};
+isPlainObject(value); // true
+getType(value) // "object"</code></pre>
+
+</div>
 
 </div>
         
@@ -2188,7 +2266,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isSet.js.html">isSet.js</a>, <a href="isSet.js.html#line8">line 8</a>
+        <a href="isSet.js.html">isSet.js</a>, <a href="isSet.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -2293,6 +2371,14 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = new Set();
+isSet(v1); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -2344,7 +2430,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="isString.js.html">isString.js</a>, <a href="isString.js.html#line8">line 8</a>
+        <a href="isString.js.html">isString.js</a>, <a href="isString.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -2449,6 +2535,18 @@
 </div>
 
 
+
+<div class="section-examples">
+<h5>Example</h5>
+
+    <pre class="prettyprint"><code>const v1 = "foo";
+isString(v1); // true
+const v2 = new String("foo");
+isString(v2); // true
+const v3 = String('foo');
+isString(v3); // true</code></pre>
+
+</div>
 
 </div>
         
@@ -2781,7 +2879,7 @@
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Sat May 07 2022 18:15:49 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Sat May 07 2022 18:48:40 GMT+0200 (Central European Summer Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
