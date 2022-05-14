@@ -1,5 +1,6 @@
 /**
- * More consistent variety of `typeof`. It returns a string which is, apart from `null` and `undefined` the name of the `constructor` property.
+ * More consistent variety of `typeof`. It returns a string such as `null` and `undefined`, `Function`, `String`, etc. 
+ * These values are case sensitive and mostly correspond to the constructor names.
  * @param {*} value The value to check
  * @returns {String}
  */
@@ -19,7 +20,8 @@ const getType = (value) => {
         return "PlainObject";
     }
 
-    // Work around objects with own property `name`
+    // Work around objects with the own property `name` as a method
+    // @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name#sect3
     if (typeof value.constructor.name === "function") {
         const match = value.constructor.toString().match(/[^\s]+\s+([\w]+)/);
         if (match && match.length > 0) {
