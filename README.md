@@ -47,7 +47,7 @@ _What's the type_ comes with one geberic detector, `getType()` and 16 `is<Type>(
 import detector from 'whats-the-type'; // note that whats-the-type is implemented as ESM and not in CJS
 
 // use `getType` if you don't know what type to expect
-import getType from 'whats-the-type/get-type.js';
+import getType from 'whats-the-type/getType.js';
 
 // use the `is<Type>` functions if you want to confirm if a value is of a specific type
 import isString from 'whats-the-type/isString.js';
