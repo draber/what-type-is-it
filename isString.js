@@ -12,6 +12,6 @@ import getType from "./getType.js";
  * const v3 = String('foo');
  * isString(v3); // true
  */
-const isString = (value) => getType(value) === "string";
+const isString = (value) => getType(value) === "String";
 
 export default isString;

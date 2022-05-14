@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>getType.js - Documentation</title>
+    <title>isGeneratorFunction.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">getType.js</h1>
+    <h1 class="page-title">isGeneratorFunction.js</h1>
     
 
     
@@ -39,42 +39,20 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * More consistent variety of `typeof`. It returns a string which is, apart from `null` and `undefined` the name of the `constructor` property.
+            <pre class="prettyprint source linenums"><code>import getType from "./getType.js";
+
+/**
+ * Check if a value is a GeneratorFunction
  * @param {*} value The value to check
- * @returns {String}
+ * @returns {Boolean}
+ * @example
+ * const value = function* generator(i) {};
+ * isGeneratorFunction(value); // true
+ * isFunction(value); // false
  */
-const getType = (value) => {
-    if (typeof value === "undefined") {
-        return "undefined";
-    }
+const isGeneratorFunction = (value) => getType(value) === "GeneratorFunction";
 
-    // `null` is a special case, it is an object but has no constructor
-    if (value === null) {
-        return "null";
-    }
-
-    // `Object` in this context is very ambiguous, `PlainObject` on the other hand
-    // is pretty established in the industry and used by other libraries as well.
-    if (value.constructor.name === "Object") {
-        return "PlainObject";
-    }
-
-    // Work around objects with own property `name`
-    if (typeof value.constructor.name === "function") {
-        const match = value.constructor.toString().match(/[^\s]+\s+([\w]+)/);
-        if (match &amp;&amp; match.length > 0) {
-            return match[1];
-        }
-        return "Object";
-    }
-
-    // The name of the constructor, for example `Array`, `Object`,
-    // `Number`, `String`, `Boolean` or `MyCustomObject`
-    return value.constructor.name;
-};
-
-export default getType;
+export default isGeneratorFunction;
 </code></pre>
         </article>
     </section>

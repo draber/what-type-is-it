@@ -2,14 +2,14 @@ import detector from "../whats-the-type.js";
 
 test("isBigInt", () => {
     const value = 42n;
-    expect(detector.getType(value)).toBe("bigint");
+    expect(detector.getType(value)).toBe("BigInt");
     expect(detector.isBigInt(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBoolean(value)).toBe(false);
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);

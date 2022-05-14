@@ -8,6 +8,6 @@ import getType from "./getType.js";
  * const v1 = new Map();
  * isMap(v1); // true
  */
-const isMap = (value) => getType(value) === "map";
+const isMap = (value) => getType(value) === "Map";
 
 export default isMap;

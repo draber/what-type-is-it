@@ -1,14 +1,8 @@
-import getType from "./getType.js";
+import isGeneratorFunction from "./isGeneratorFunction.js";
 
 /**
- * Check if a value is a generator
- * @param {*} value The value to check
- * @returns {Boolean}
- * @example
- * const value = function* generator(i) {};
- * isGenerator(value); // true
- * isFunction(value); // false
+ * Alias for isGeneratorFunction for backwards compatibility
  */
-const isGenerator = (value) => getType(value) === "generator";
+const isGenerator = (value) => isGeneratorFunction(value);
 
 export default isGenerator;

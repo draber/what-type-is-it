@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isRegExp", () => {
     const value = /.*/g;
-    expect(detector.getType(value)).toBe("regexp");
+    expect(detector.getType(value)).toBe("RegExp");
     expect(detector.isRegExp(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);
@@ -10,7 +10,7 @@ test("isRegExp", () => {
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);
@@ -23,7 +23,7 @@ test("isRegExp", () => {
 
 test("isRegExp2", () => {
     const value = new RegExp('.*', 'g');
-    expect(detector.getType(value)).toBe("regexp");
+    expect(detector.getType(value)).toBe("RegExp");
     expect(detector.isRegExp(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);
@@ -31,7 +31,7 @@ test("isRegExp2", () => {
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);

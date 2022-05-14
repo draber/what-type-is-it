@@ -1,22 +1,36 @@
 /**
- * More consistent variety of `typeof`
+ * More consistent variety of `typeof`. It returns a string which is, apart from `null` and `undefined` the name of the `constructor` property.
  * @param {*} value The value to check
  * @returns {String}
  */
- const getType = (value) => {
-    if(typeof value === 'undefined'){
-        return 'undefined';
+const getType = (value) => {
+    if (typeof value === "undefined") {
+        return "undefined";
     }
-    if(value === null){
-        return 'null';
+
+    // `null` is a special case, it is an object but has no constructor
+    if (value === null) {
+        return "null";
     }
-    if(!value.constructor || !value.constructor.name){
-        return 'unknown';
+
+    // `Object` in this context is very ambiguous, `PlainObject` on the other hand
+    // is pretty established in the industry and used by other libraries as well.
+    if (value.constructor.name === "Object") {
+        return "PlainObject";
     }
-    if(value.constructor.name === 'GeneratorFunction'){
-        return 'generator'
+
+    // Work around objects with own property `name`
+    if (typeof value.constructor.name === "function") {
+        const match = value.constructor.toString().match(/[^\s]+\s+([\w]+)/);
+        if (match && match.length > 0) {
+            return match[1];
+        }
+        return "Object";
     }
-    return value.constructor.name.toLowerCase();
+
+    // The name of the constructor, for example `Array`, `Object`,
+    // `Number`, `String`, `Boolean` or `MyCustomObject`
+    return value.constructor.name;
 };
 
 export default getType;

@@ -2,14 +2,14 @@ import detector from "../whats-the-type.js";
 
 test("isDate", () => {
     const value = new Date();
-    expect(detector.getType(value)).toBe("date");
+    expect(detector.getType(value)).toBe("Date");
     expect(detector.isDate(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);
     expect(detector.isBoolean(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);

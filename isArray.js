@@ -12,6 +12,6 @@ import getType from "./getType.js";
  * const v3 = Array.from([1, 2, 3], x => x + x));
  * isArray(v3); // true
  */
-const isArray = (value) => getType(value) === "array";
+const isArray = (value) => getType(value) === "Array";
 
 export default isArray;

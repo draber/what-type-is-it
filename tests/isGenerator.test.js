@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isGenerator", () => {
     const value = function* generator(i) {};
-    expect(detector.getType(value)).toBe("generator");
+    expect(detector.getType(value)).toBe("GeneratorFunction");
     expect(detector.isGenerator(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);

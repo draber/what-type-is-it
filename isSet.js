@@ -8,6 +8,6 @@ import getType from "./getType.js";
  * const v1 = new Set();
  * isSet(v1); // true
  */
-const isSet = (value) => getType(value) === "set";
+const isSet = (value) => getType(value) === "Set";
 
 export default isSet;

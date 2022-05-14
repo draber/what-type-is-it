@@ -7,8 +7,8 @@ import getType from "./getType.js";
  * @example
  * const value = {a:1, b:2};
  * isPlainObject(value); // true
- * getType(value) // "object"
+ * getType(value) // "PlainObject"
  */
-const isPlainObject = (value) => getType(value) === "object";
+const isPlainObject = (value) => getType(value) === "PlainObject";
 
 export default isPlainObject;

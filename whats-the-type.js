@@ -4,6 +4,7 @@ import isBoolean from "./isBoolean.js";
 import isDate from "./isDate.js";
 import isError from "./isError.js";
 import isFunction from "./isFunction.js";
+import isGeneratorFunction from "./isGeneratorFunction.js";
 import isGenerator from "./isGenerator.js";
 import isMap from "./isMap.js";
 import isNull from "./isNull.js";
@@ -23,6 +24,7 @@ export default {
     isDate,
     isError,
     isFunction,
+    isGeneratorFunction,
     isGenerator,
     isMap,
     isNull,

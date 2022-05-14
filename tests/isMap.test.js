@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isMap", () => {
     const value = new Map();
-    expect(detector.getType(value)).toBe("map");
+    expect(detector.getType(value)).toBe("Map");
     expect(detector.isMap(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);
@@ -10,7 +10,7 @@ test("isMap", () => {
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);
     expect(detector.isPlainObject(value)).toBe(false);

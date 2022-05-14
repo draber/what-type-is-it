@@ -1,7 +1,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a number
+ * Check if a value is a Number
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example
@@ -15,7 +15,7 @@ import getType from "./getType.js";
  * isNumber(v4); // false
  * isBigInt(v4); // true
  */
-const isNumber = (value) => getType(value) === "number";
+const isNumber = (value) => getType(value) === "Number";
 
 export default isNumber;
 

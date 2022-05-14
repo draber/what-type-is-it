@@ -1,6 +1,6 @@
 {
   "name": "whats-the-type",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Type detection beyond `typeof`",
   "main": "whats-the-type.js",
   "type": "module",
@@ -19,7 +19,7 @@
     "isDate",
     "isError",
     "isFunction",
-    "isGenerator",
+    "isGeneratorFunction",
     "isMap",
     "isNull",
     "isNumber",

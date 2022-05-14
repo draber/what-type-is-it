@@ -10,7 +10,7 @@ test("isNull", () => {
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);
     expect(detector.isPlainObject(value)).toBe(false);

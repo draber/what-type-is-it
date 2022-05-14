@@ -5,6 +5,6 @@ import getType from "./getType.js";
  * @param {*} value The value to check
  * @returns {Boolean}
  */
-const isBoolean = (value) => getType(value) === "boolean";
+const isBoolean = (value) => getType(value) === "Boolean";
 
 export default isBoolean;

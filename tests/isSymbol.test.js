@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isSymbol", () => {
     const value = Symbol("test");
-    expect(detector.getType(value)).toBe("symbol");
+    expect(detector.getType(value)).toBe("Symbol");
     expect(detector.isSymbol(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);
@@ -10,7 +10,7 @@ test("isSymbol", () => {
     expect(detector.isDate(value)).toBe(false);
     expect(detector.isError(value)).toBe(false);
     expect(detector.isFunction(value)).toBe(false);
-    expect(detector.isGenerator(value)).toBe(false);
+    expect(detector.isGeneratorFunction(value)).toBe(false);
     expect(detector.isMap(value)).toBe(false);
     expect(detector.isNull(value)).toBe(false);
     expect(detector.isNumber(value)).toBe(false);

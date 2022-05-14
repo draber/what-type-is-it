@@ -7,9 +7,9 @@ import getType from "./getType.js";
  * @example
  * const value = BigInt(123);
  * isBigInt(value); // true
- * getType(value) // "bigint"
+ * getType(value) // "BigInt"
  * isNumber(value); // false
  */
-const isBigInt = (value) => getType(value) === "bigint";
+const isBigInt = (value) => getType(value) === "BigInt";
 
 export default isBigInt;

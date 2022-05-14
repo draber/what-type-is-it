@@ -13,9 +13,9 @@ import getType from "./getType.js";
  * isFunction(v3); // true
  * const v4 = function* generator(i) {};
  * isFunction(v4); // false
- * isGenerator(v4); // true
+ * isGeneratorFunction(v4); // true
  */
-const isFunction = (value) => getType(value) === "function";
+const isFunction = (value) => getType(value) === "Function";
 
 export default isFunction;
 

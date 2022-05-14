@@ -10,6 +10,6 @@ import getType from "./getType.js";
  * const v3 = new RegExp("regexp", 'gi');
  * isRegExp(v3); // true
  */
-const isRegExp = (value) => getType(value) === "regexp";
+const isRegExp = (value) => getType(value) === "RegExp";
 
 export default isRegExp;
