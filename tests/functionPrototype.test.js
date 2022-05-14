@@ -1,7 +1,5 @@
 import detector from "../whats-the-type.js";
 
-// fix for https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name#sect3
-
 function a() {
 }
 function b() {
