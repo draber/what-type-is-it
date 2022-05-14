@@ -1,6 +1,6 @@
 {
   "name": "whats-the-type",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Type detection beyond `typeof`",
   "main": "whats-the-type.js",
   "type": "module",
@@ -13,6 +13,9 @@
     "url": "git+https://github.com/draber/whats-the-type.git"
   },
   "keywords": [
+    "typeof",
+    "getType",
+    "type detection",
     "isArray",
     "isBigint",
     "isBoolean",
@@ -28,8 +31,7 @@
     "isSet",
     "isString",
     "isSymbol",
-    "isUndefined",
-    "getType"
+    "isUndefined"
   ],
   "author": "Dieter Raber",
   "license": "MIT",

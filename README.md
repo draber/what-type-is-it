@@ -100,4 +100,6 @@ quux.prototype = new baz();
 getType(new quux()) // returns 'baz', not 'quux'!
 ```
 
-Docs at [whats-the-type.netlify.app](https://whats-the-type.netlify.app/)
+- Repository: [github.com/draber/whats-the-type](https://github.com/draber/whats-the-type) 
+- Package: [npmjs.com/package/whats-the-type](https://npmjs.com/package/whats-the-type)
+- Docs: [whats-the-type.netlify.app](https://whats-the-type.netlify.app/)
