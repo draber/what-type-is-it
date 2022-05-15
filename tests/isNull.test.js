@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isNull", () => {
     const value = null;
-    expect(detector.getType(value)).toBe("null");
+    expect(detector.getType(value)).toBe("Null");
     expect(detector.isNull(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);

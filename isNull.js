@@ -5,6 +5,6 @@ import getType from "./getType.js";
  * @param {*} value The value to check
  * @returns {Boolean}
  */
-const isNull = (value) => getType(value) === "null";
+const isNull = (value) => getType(value) === "Null";
 
 export default isNull;

@@ -2,7 +2,7 @@ import detector from "../whats-the-type.js";
 
 test("isUndefined", () => {
     let value;
-    expect(detector.getType(value)).toBe("undefined");
+    expect(detector.getType(value)).toBe("Undefined");
     expect(detector.isUndefined(value)).toBe(true);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);

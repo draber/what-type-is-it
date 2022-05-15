@@ -6,12 +6,12 @@
  */
 const getType = (value) => {
     if (typeof value === "undefined") {
-        return "undefined";
+        return "Undefined";
     }
 
     // `null` is a special case, it is an object but has no constructor
     if (value === null) {
-        return "null";
+        return "Null";
     }
 
     // `Object` in this context is very ambiguous, `PlainObject` on the other hand

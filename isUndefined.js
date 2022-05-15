@@ -5,6 +5,6 @@ import getType from "./getType.js";
  * @param {*} value The value to check
  * @returns {Boolean}
  */
-const isUndefined = (value) => getType(value) === "undefined";
+const isUndefined = (value) => getType(value) === "Undefined";
 
 export default isUndefined;

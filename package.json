@@ -1,46 +1,53 @@
 {
-  "name": "whats-the-type",
-  "version": "2.0.3",
-  "description": "Type detection beyond `typeof`",
-  "main": "whats-the-type.js",
-  "type": "module",
-  "scripts": {
-    "test": "node --warnings --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --coverage ./tests",
-    "docs": "jsdoc -c ./jsdoc.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/draber/whats-the-type.git"
-  },
-  "keywords": [
-    "typeof",
-    "getType",
-    "type detection",
-    "isArray",
-    "isBigint",
-    "isBoolean",
-    "isDate",
-    "isError",
-    "isFunction",
-    "isGeneratorFunction",
-    "isMap",
-    "isNull",
-    "isNumber",
-    "isPlainObject",
-    "isRegexp",
-    "isSet",
-    "isString",
-    "isSymbol",
-    "isUndefined"
-  ],
-  "author": "Dieter Raber",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/draber/whats-the-type/issues"
-  },
-  "homepage": "https://github.com/draber/whats-the-type#readme",
-  "devDependencies": {
-    "jest": "^28.1.0",
-    "minami": "^1.2.3"
-  }
+    "name": "whats-the-type",
+    "version": "2.1.0",
+    "description": "Type detection beyond `typeof`",
+    "main": "whats-the-type.js",
+    "type": "module",
+    "scripts": {
+        "test": "node --warnings --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --coverage ./tests",
+        "docs": "jsdoc -c ./jsdoc.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/draber/whats-the-type.git"
+    },
+    "keywords": [
+        "typeof",
+        "getType",
+        "type detection",
+        "isArray",
+        "isAsyncFunction",
+        "isBigint",
+        "isBlob",
+        "isBoolean",
+        "isDate",
+        "isError",
+        "isFile",
+        "isFunction",
+        "isGeneratorFunction",
+        "isIterable",
+        "isMap",
+        "isNull",
+        "isNumber",
+        "isPlainObject",
+        "isPromise",
+        "isRegexp",
+        "isSet",
+        "isString",
+        "isSymbol",
+        "isUndefined",
+        "isWeakMap",
+        "isWeakSet"
+    ],
+    "author": "Dieter Raber",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/draber/whats-the-type/issues"
+    },
+    "homepage": "https://github.com/draber/whats-the-type#readme",
+    "devDependencies": {
+        "jest": "^28.1.0",
+        "minami": "^1.2.3"
+    }
 }
