@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652724607399" clover="3.2.0">
-  <project timestamp="1652724607399" name="All files">
+<coverage generated="1652724959829" clover="3.2.0">
+  <project timestamp="1652724959829" name="All files">
     <metrics statements="38" coveredstatements="37" conditionals="18" coveredconditionals="17" methods="24" coveredmethods="24" elements="80" coveredelements="78" complexity="0" loc="38" ncloc="38" packages="1" files="25" classes="25"/>
     <file name="getType.js" path="F:\htdocs\whats-the-type\getType.js">
       <metrics statements="15" coveredstatements="14" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>

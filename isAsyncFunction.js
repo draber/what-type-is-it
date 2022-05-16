@@ -10,6 +10,6 @@ import getType from "./getType.js";
  * isFunction(v1); // false, because this covers regular functions only
  * isCallable(v1); // true, this covers functions, async functions and generators
  */
-const isPromise = (value) => getType(value) === "AsyncFunction";
+const isAsyncFunction = (value) => getType(value) === "AsyncFunction";
 
-export default isPromise;
+export default isAsyncFunction;
