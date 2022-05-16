@@ -64,7 +64,7 @@ import isString from 'whats-the-type/isString.js';
 ```
 
 ### getType()
-`getType()` returns a string such as `null` and `undefined`, `Function`, `String`, etc. These values are case sensitive and mostly correspond to the constructor names. In other words, the function doesn't just return `object` for most types but is as precise as possible.
+`getType()` returns a string such as `Null`, `Undefined`, `Function`, `String`, etc. These values are case sensitive and mostly correspond to the constructor names. In other words, the function doesn't just return `object` for most types but is as precise as possible.
 
 ```javascript
 // the detector always returns a string
