@@ -73,12 +73,50 @@ getType(['a', 'b', 'c']); // 'Array'
 // use the import name (e.g. 'detector') if you imported everything
 detector.getType(123); // 'Number'
 
-// plain objects are reported as 'PlainObject' rather than the more ambiguous 'Object'
-getType({}); // 'PlainObject'
+// here are some more examples but getType() isn't limited to these
+const v1 = null;
+getType(v1); // "Null"
 
-// custom classes are reported by their name
-class MyClass extends Object {};
-getType(new MyClass()); // 'MyClass'
+let v2;
+getType(v2); // "Undefined"
+
+const v3 = function() {};
+getType(v3); // "Function", use isCallable() to cover async functions and generators as well
+
+const v4 = async function() {};
+getType(v4); // "AsyncFunction"
+
+const v5 = function* generator(i) {};
+getType(v5); // "GeneratorFunction"
+
+const v6 = { foo: "bar" };
+getType(v6); // "PlainObject", not "Object", as you may have expected
+
+const v7 = new Map();
+getType(v7); // "Map"
+
+const v8 = new Set();
+getType(v8); // "Set"
+
+const v9 = new WeakMap();
+getType(v9); // "WeakMap"
+
+const v10 = new WeakSet();
+getType(v10); // "WeakSet"
+
+const v11 = new Date();
+getType(v11); // "Date"
+
+const v12 = new Error();
+getType(v12); // "Error"
+
+const v13 = new Promise(() => {});
+getType(v13); // "Promise"
+
+class CustomClass {}
+const v14 = new CustomClass();
+getType(v14); // "CustomClass"
+getType(class CustomClass {}) // "Class", note the difference: CustomClass has not been initiated yet
 ```
 
 ### is&lt;Type&gt;()
