@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>isRegExp.js - Documentation</title>
+    <title>isCallable.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">isRegExp.js</h1>
+    <h1 class="page-title">isCallable.js</h1>
     
 
     
@@ -42,18 +42,13 @@
             <pre class="prettyprint source linenums"><code>import getType from "./getType.js";
 
 /**
- * Check if a value is a regexp
+ * Check if a value is callable
  * @param {*} value The value to check
  * @returns {Boolean}
- * @example
- * const v1 = /regexp/;
- * isRegExp(v2); // true
- * const v3 = new RegExp("regexp", 'gi');
- * isRegExp(v3); // true
  */
-const isRegExp = (value) => getType(value) === "RegExp";
+const isCallable = (value) => getType(value).endsWith('Function');
 
-export default isRegExp;
+export default isCallable;
 </code></pre>
         </article>
     </section>

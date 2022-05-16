@@ -1,5 +1,5 @@
 /**
- * More consistent variety of `typeof`. It returns a string such as `null` and `undefined`, `Function`, `String`, etc. 
+ * More consistent variety of `typeof`. It returns a string such as `null` and `undefined`, `Function`, `String`, etc.
  * These values are case sensitive and mostly correspond to the constructor names.
  * @param {*} value The value to check
  * @returns {String}
@@ -9,15 +9,24 @@ const getType = (value) => {
         return "Undefined";
     }
 
-    // `null` is a special case, it is an object but has no constructor
+    // `null` is an object, but has no constructor
     if (value === null) {
         return "Null";
     }
 
-    // `Object` in this context is very ambiguous, `PlainObject` on the other hand
+    // `Object` in this context is ambiguous, `PlainObject` on the other hand
     // is pretty established in the industry and used by other libraries as well.
     if (value.constructor.name === "Object") {
         return "PlainObject";
+    }
+
+    // ES6 classes that aren't initiated with `new` would be reported with `Function`
+    // instead of `Class`. Parsing the input value as string can fix this
+    if (
+        value.constructor.name === "Function" &&
+        /^class\s+([\w]+\s+)?{/.test(value.toString().replace(/\s+/gs, " "))
+    ) {
+        return "Class";
     }
 
     // Work around objects with the own property `name` as a method

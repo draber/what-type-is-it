@@ -3,6 +3,7 @@ import isAsyncFunction from "./isAsyncFunction.js";
 import isBlob from "./isBlob.js";
 import isBigInt from "./isBigInt.js";
 import isBoolean from "./isBoolean.js";
+import isCallable from "./isCallable.js";
 import isDate from "./isDate.js";
 import isError from "./isError.js";
 import isFunction from "./isFunction.js";
@@ -28,11 +29,12 @@ export default {
     isBlob,
     isBigInt,
     isBoolean,
+    isCallable,
     isDate,
     isError,
     isFunction,
-    isGeneratorFunction,
     isGenerator,
+    isGeneratorFunction,
     isIterable,
     isMap,
     isNull,

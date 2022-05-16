@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652642357958" clover="3.2.0">
-  <project timestamp="1652642357958" name="All files">
-    <metrics statements="35" coveredstatements="34" conditionals="14" coveredconditionals="13" methods="23" coveredmethods="23" elements="72" coveredelements="70" complexity="0" loc="35" ncloc="35" packages="1" files="24" classes="24"/>
+<coverage generated="1652693426095" clover="3.2.0">
+  <project timestamp="1652693426095" name="All files">
+    <metrics statements="38" coveredstatements="37" conditionals="18" coveredconditionals="17" methods="24" coveredmethods="24" elements="80" coveredelements="78" complexity="0" loc="38" ncloc="38" packages="1" files="25" classes="25"/>
     <file name="getType.js" path="F:\htdocs\whats-the-type\getType.js">
-      <metrics statements="13" coveredstatements="12" conditionals="12" coveredconditionals="11" methods="1" coveredmethods="1"/>
-      <line num="7" count="27" type="stmt"/>
-      <line num="8" count="652" type="cond" truecount="2" falsecount="0"/>
+      <metrics statements="15" coveredstatements="14" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
+      <line num="7" count="28" type="stmt"/>
+      <line num="8" count="659" type="cond" truecount="2" falsecount="0"/>
       <line num="9" count="17" type="stmt"/>
-      <line num="13" count="635" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="642" type="cond" truecount="2" falsecount="0"/>
       <line num="14" count="17" type="stmt"/>
-      <line num="19" count="618" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="625" type="cond" truecount="2" falsecount="0"/>
       <line num="20" count="34" type="stmt"/>
-      <line num="25" count="584" type="cond" truecount="2" falsecount="0"/>
-      <line num="26" count="34" type="stmt"/>
-      <line num="27" count="34" type="cond" truecount="3" falsecount="1"/>
-      <line num="28" count="34" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="35" count="550" type="stmt"/>
+      <line num="25" count="591" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="34" count="589" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="34" type="stmt"/>
+      <line num="36" count="34" type="cond" truecount="3" falsecount="1"/>
+      <line num="37" count="34" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="44" count="555" type="stmt"/>
     </file>
     <file name="isArray.js" path="F:\htdocs\whats-the-type\isArray.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -24,7 +26,7 @@
     </file>
     <file name="isAsyncFunction.js" path="F:\htdocs\whats-the-type\isAsyncFunction.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="11" count="27" type="stmt"/>
+      <line num="11" count="28" type="stmt"/>
     </file>
     <file name="isBigInt.js" path="F:\htdocs\whats-the-type\isBigInt.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -32,11 +34,15 @@
     </file>
     <file name="isBlob.js" path="F:\htdocs\whats-the-type\isBlob.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="12" count="27" type="stmt"/>
+      <line num="12" count="28" type="stmt"/>
     </file>
     <file name="isBoolean.js" path="F:\htdocs\whats-the-type\isBoolean.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="8" count="38" type="stmt"/>
+    </file>
+    <file name="isCallable.js" path="F:\htdocs\whats-the-type\isCallable.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="28" type="stmt"/>
     </file>
     <file name="isDate.js" path="F:\htdocs\whats-the-type\isDate.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -52,7 +58,7 @@
     </file>
     <file name="isGenerator.js" path="F:\htdocs\whats-the-type\isGenerator.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="8" count="27" type="stmt"/>
+      <line num="8" count="28" type="stmt"/>
     </file>
     <file name="isGeneratorFunction.js" path="F:\htdocs\whats-the-type\isGeneratorFunction.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -60,7 +66,7 @@
     </file>
     <file name="isIterable.js" path="F:\htdocs\whats-the-type\isIterable.js">
       <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="13" count="27" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="28" type="cond" truecount="2" falsecount="0"/>
     </file>
     <file name="isMap.js" path="F:\htdocs\whats-the-type\isMap.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -100,11 +106,11 @@
     </file>
     <file name="isWeakMap.js" path="F:\htdocs\whats-the-type\isWeakMap.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="11" count="27" type="stmt"/>
+      <line num="11" count="28" type="stmt"/>
     </file>
     <file name="isWeakSet.js" path="F:\htdocs\whats-the-type\isWeakSet.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="11" count="27" type="stmt"/>
+      <line num="11" count="28" type="stmt"/>
     </file>
     <file name="whats-the-type.js" path="F:\htdocs\whats-the-type\whats-the-type.js">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

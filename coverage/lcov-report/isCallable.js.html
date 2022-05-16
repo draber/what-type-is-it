@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for isBoolean.js</title>
+    <title>Code coverage report for isCallable.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> isBoolean.js</h1>
+        <h1><a href="index.html">All files</a> isCallable.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -80,19 +80,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import getType from "./getType.js";
 &nbsp;
 /**
- * Check if a value is a boolean
+ * Check if a value is callable
  * @param {*} value The value to check
  * @returns {Boolean}
  */
-const isBoolean = (value) =&gt; getType(value) === "Boolean";
+const isCallable = (value) =&gt; getType(value).endsWith('Function');
 &nbsp;
-export default isBoolean;
+export default isCallable;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
