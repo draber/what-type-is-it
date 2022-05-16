@@ -1,6 +1,6 @@
 {
     "name": "whats-the-type",
-    "version": "2.3.4",
+    "version": "2.3.5",
     "description": "Type detection beyond `typeof`",
     "main": "whats-the-type.js",
     "type": "module",

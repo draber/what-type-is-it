@@ -3,6 +3,7 @@
 ![](https://img.shields.io/github/license/draber/whats-the-type.svg)
 ![](https://img.shields.io/github/package-json/v/draber/whats-the-type.svg?)
 ![](https://img.shields.io/bundlephobia/min/whats-the-type.svg)
+[![DeepScan grade](https://deepscan.io/api/teams/17732/projects/21075/branches/594827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=17732&pid=21075&bid=594827)
 
 `typeof` returns `[object Object]` for almost everything beyond primitives. This module works around this drawback and returns a more accurate type. 
 
