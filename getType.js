@@ -1,5 +1,5 @@
 /**
- * More consistent variety of `typeof`. It returns a string such as `null` and `undefined`, `Function`, `String`, etc.
+ * More consistent variety of `typeof`. It returns a string such as `Null` and `Undefined`, `Function`, `String`, etc.
  * These values are case sensitive and mostly correspond to the constructor names.
  * @param {*} value The value to check
  * @returns {String}

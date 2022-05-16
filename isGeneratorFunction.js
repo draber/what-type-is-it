@@ -8,6 +8,7 @@ import getType from "./getType.js";
  * const value = function* generator(i) {};
  * isGeneratorFunction(value); // true
  * isFunction(value); // false
+ * isCallable(value); // true
  */
 const isGeneratorFunction = (value) => getType(value) === "GeneratorFunction";
 

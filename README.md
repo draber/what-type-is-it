@@ -17,8 +17,9 @@
 
     If you're using  the `is<Type>()` functions only, your code will keep on working without any changes, except for the now fixed `Function.name` issue [5]. As for `getType()` you'll need to update your code with regards to the case sensitivity [1].
 
-- v2.1 adds a number of `is<Type>()` functions: `isAsyncFunction()`, `isBlob()`, `isIterable()`, `isFile()`, `isPromise()`, `isWeakMap()` and `isWeakSet()`.
+- v2.1 adds a number of `is<Type>()` functions: `isAsyncFunction()`, `isBlob()`, `isIterable()`, `isPromise()`, `isWeakMap()` and `isWeakSet()`.
 - v2.2 introduces `isCallable()`. Not initiated classes are now reported as `Class` and no longer as `Function`. It also fixes some minor bugs from earlier versions, mainly in the documentation.
+- v2.3 removes `isFile()` again, because File objects and physical files aren't the same thing. This could have lead to wrong expectations and misunderstandings. v2.3 also adds more code examples.
 
 ## Installation
 
