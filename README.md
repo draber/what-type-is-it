@@ -37,7 +37,6 @@ _What's the type_ comes with one generic detector, `getType()` and many `is<Type
 - [isCallable()](//whats-the-type.netlify.app/global.html#isCallable)              
 - [isDate()](//whats-the-type.netlify.app/global.html#isDate)                          
 - [isError()](//whats-the-type.netlify.app/global.html#isError)                        
-- [isFile()](//whats-the-type.netlify.app/global.html#isFile)                          
 - [isFunction()](//whats-the-type.netlify.app/global.html#isFunction)                 
 - [isGeneratorFunction()](//whats-the-type.netlify.app/global.html#isGeneratorFunction)
 - [isMap()](//whats-the-type.netlify.app/global.html#isMap)                            
