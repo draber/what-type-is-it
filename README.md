@@ -18,9 +18,9 @@
 
     If you're using  the `is<Type>()` functions only, your code will keep on working without any changes, except for the now fixed `Function.name` issue [5]. As for `getType()` you'll need to update your code with regards to the case sensitivity [1].
 
-- v2.1 - v2.4 add more code examples a range of new `is<Type>()` functions; check out _Usage_ for a complete list.
+- v2.1 - v2.4 add more code examples as well as a range of new `is<Type>()` functions; check out the complete list under _Usage_.
 
-- v2.4 adds [reference tables](//whats-the-type.netlify.app/tutorial-01.-Basics.html) as a look-up for the return values of `getType()`.
+- v2.4 adds [reference tables](//whats-the-type.netlify.app/tutorial-01.-Basics.html) as a look-up for the possible return values of `getType()`.
 
 ## Installation
 
