@@ -10,7 +10,7 @@ import isElement from "./isElement.js";
  * Check if a value is a Math element
  * @param {*} value The value to check
  * @returns {Boolean}
- * @example * 
+ * @example
  * const v1 = document.createElementNS("http://www.w3.org/1998/Math/MathML", "mrow");
  * isMathElement(v1); // true
  */
