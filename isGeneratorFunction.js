@@ -1,3 +1,9 @@
+/**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
 import getType from "./getType.js";
 
 /**
@@ -8,7 +14,6 @@ import getType from "./getType.js";
  * const value = function* generator(i) {};
  * isGeneratorFunction(value); // true
  * isFunction(value); // false
- * isCallable(value); // true
  */
 const isGeneratorFunction = (value) => getType(value) === "GeneratorFunction";
 

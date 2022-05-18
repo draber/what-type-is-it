@@ -1,4 +1,10 @@
-import getType from "./getType.js";
+/**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
+ import getType from "./getType.js";
 
 /**
  * Check if a value is a AsyncFunction
@@ -8,7 +14,6 @@ import getType from "./getType.js";
  * const v1 = async(() => {});
  * isAsyncFunction(v1); // true 
  * isFunction(v1); // false, because this covers regular functions only
- * isCallable(v1); // true, this covers functions, async functions and generators
  */
 const isAsyncFunction = (value) => getType(value) === "AsyncFunction";
 

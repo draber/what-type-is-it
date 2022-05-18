@@ -1,3 +1,9 @@
+/**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
 import getType from "./getType.js";
 
 /**

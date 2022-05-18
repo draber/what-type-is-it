@@ -1,3 +1,9 @@
+/**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
 import getType from "./getType.js";
 
 /**
@@ -7,7 +13,6 @@ import getType from "./getType.js";
  * @example
  * const value = BigInt(123);
  * isBigInt(value); // true
- * getType(value) // "BigInt"
  * isNumber(value); // false
  */
 const isBigInt = (value) => getType(value) === "BigInt";

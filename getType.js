@@ -1,4 +1,10 @@
 /**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
+/**
  * More consistent variety of `typeof`. It returns a string such as `Null`, `Undefined`, `Function`, `String`, etc.
  * These values are case sensitive and mostly correspond to the constructor names.
  * @param {*} value The value to check
@@ -64,7 +70,7 @@ const getType = (value) => {
     if (value.constructor.name === "Object") {
         return "PlainObject";
     }
-
+    
     // ES6 classes that aren't initiated with `new` would be reported with `Function`
     // instead of `Class`. Parsing the input value as string can fix this
     if (
@@ -72,6 +78,11 @@ const getType = (value) => {
         /^class\s+([\w]+\s+)?{/.test(value.toString().replace(/\s+/gs, " "))
     ) {
         return "Class";
+    }
+
+    // Chrome at this point reports elements of the type `MathMLElement` wrongly as `Element`
+    if (value.constructor.name === "Element" && value.namespaceURI.endsWith('MathML')) {
+        return "MathMLElement";
     }
 
     // Work around objects with the own property `name` as a method

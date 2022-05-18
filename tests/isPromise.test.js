@@ -1,8 +1,9 @@
 import detector from "../whats-the-type.js";
 
 test("isPromise", () => {
-    const value = new Promise((resolve) => {});
+    const value = new Promise(() => {});
     expect(detector.getType(value)).toBe("Promise");
+    expect(detector.isPromise(value)).toBe(true);
     expect(detector.isFunction(value)).toBe(false);
     expect(detector.isArray(value)).toBe(false);
     expect(detector.isBigInt(value)).toBe(false);

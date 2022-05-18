@@ -94,7 +94,7 @@ tt, code, kbd, samp {
   background: #f4f4f4;
   padding: 1px 5px;
   border-radius: 5px;
-  font-size: 14px;
+  
 }
 
 blockquote {
@@ -222,7 +222,7 @@ section {
 nav {
   float: left;
   display: block;
-  width: 250px;
+  width: 270px;
   background: #fff;
   overflow: auto;
   position: fixed;
@@ -245,7 +245,7 @@ nav li {
 
 .nav-heading a {
   color: #888;
-  font-size: 14px;
+  
   display: inline-block;
 }
 
@@ -259,7 +259,7 @@ nav li {
   margin-right: 5px;
   font-weight: bold;
   line-height: 20px;
-  font-size: 13px;
+  
 }
 
 .type-function {
@@ -372,7 +372,7 @@ footer {
 }
 
 .prettyprint {
-  font-size: 13px;
+  
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);
@@ -445,7 +445,7 @@ footer {
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   width: 100%;
-  font-size: 14px;
+  
   /* margin-left: 15px; */
 }
 
@@ -503,7 +503,7 @@ dl.param-type {
   display: inline-block;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  
 }
 
 .disabled {
@@ -642,7 +642,7 @@ dl.param-type {
 
   nav {
     background: #FFF;
-    width: 250px;
+    width: 270px;
     height: 100%;
     position: fixed;
     top: 0;

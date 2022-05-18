@@ -114,7 +114,29 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,25 +187,61 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import isArray from "./isArray.js";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Type detection beyond `typeof`
+ *
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
+import isArray from "./isArray.js";
 import isAsyncFunction from "./isAsyncFunction.js";
-import isBlob from "./isBlob.js";
 import isBigInt from "./isBigInt.js";
+import isBlob from "./isBlob.js";
 import isBoolean from "./isBoolean.js";
 import isCallable from "./isCallable.js";
+import isCustomElement from "./isCustomElement.js";
 import isDate from "./isDate.js";
+import isElement from "./isElement.js";
+import isElementCollection from "./isElementCollection.js";
+import isEmptyObject from "./isEmptyObject.js";
 import isError from "./isError.js";
 import isFunction from "./isFunction.js";
-import isGeneratorFunction from "./isGeneratorFunction.js";
 import isGenerator from "./isGenerator.js";
+import isGeneratorFunction from "./isGeneratorFunction.js";
+import isHtmlElement from "./isHtmlElement.js";
 import isIterable from "./isIterable.js";
 import isMap from "./isMap.js";
+import isMathElement from "./isMathElement.js";
 import isNull from "./isNull.js";
 import isNumber from "./isNumber.js";
 import isPlainObject from "./isPlainObject.js";
+import isPromise from "./isPromise.js";
 import isRegExp from "./isRegExp.js";
 import isSet from "./isSet.js";
 import isString from "./isString.js";
+import isSvgElement from "./isSvgElement.js";
 import isSymbol from "./isSymbol.js";
 import isUndefined from "./isUndefined.js";
 import isWeakMap from "./isWeakMap.js";
@@ -193,23 +251,31 @@ import getType from "./getType.js";
 export default {
     isArray,
     isAsyncFunction,
-    isBlob,
     isBigInt,
+    isBlob,
     isBoolean,
     isCallable,
+    isCustomElement,
     isDate,
+    isElement,
+    isElementCollection,
+    isEmptyObject,
     isError,
     isFunction,
     isGenerator,
     isGeneratorFunction,
+    isHtmlElement,
     isIterable,
     isMap,
+    isMathElement,
     isNull,
     isNumber,
     isPlainObject,
+    isPromise,
     isRegExp,
     isSet,
     isString,
+    isSvgElement,
     isSymbol,
     isUndefined,
     isWeakMap,
@@ -223,7 +289,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 16 2022 20:31:13 GMT+0200 (Central European Summer Time)
+                at Wed May 18 2022 20:16:06 GMT+0200 (Central European Summer Time)
             </div>
         <script src="prettify.js"></script>
         <script>

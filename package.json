@@ -1,12 +1,12 @@
 {
     "name": "whats-the-type",
-    "version": "2.3.5",
+    "version": "2.4.0",
     "description": "Type detection beyond `typeof`",
     "main": "whats-the-type.js",
     "type": "module",
     "scripts": {
         "test": "node --warnings --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --coverage ./tests",
-        "docs": "jsdoc -c ./jsdoc.json"
+        "docs": "jsdoc -c ./jsdoc.json & node ./utils/doc-post-process.js"
     },
     "repository": {
         "type": "git",
@@ -18,16 +18,22 @@
         "type detection",
         "isArray",
         "isAsyncFunction",
-        "isBigint",
+        "isBigInt",
         "isBlob",
         "isBoolean",
         "isCallable",
+        "isCustomElement",
         "isDate",
+        "isElement",
+        "isElementCollection",
+        "isEmptyObject",
         "isError",
         "isFunction",
         "isGeneratorFunction",
+        "isHtmlElement",
         "isIterable",
         "isMap",
+        "isMathElement",
         "isNull",
         "isNumber",
         "isPlainObject",
@@ -35,6 +41,7 @@
         "isRegExp",
         "isSet",
         "isString",
+        "isSvgElement",
         "isSymbol",
         "isUndefined",
         "isWeakMap",
@@ -47,6 +54,7 @@
     },
     "homepage": "https://github.com/draber/whats-the-type#readme",
     "devDependencies": {
+        "global-jsdom": "^8.4.0",
         "jest": "^28.1.0",
         "minami": "^1.2.3"
     }

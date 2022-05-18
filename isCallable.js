@@ -1,3 +1,9 @@
+/**
+ * Type detection beyond `typeof`
+ * 
+ * Copyright (C) 2022  Dieter Raber
+ * https://opensource.org/licenses/MIT
+ */
 import getType from "./getType.js";
 
 /**
@@ -5,8 +11,25 @@ import getType from "./getType.js";
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example
- * const v1 = async(() => {});
- * isCallable(v1); // true, this covers functions, async functions and generators
+ * class Foo {
+ *     anyMethod(){...}
+ *     static otherMethod(){...}
+ * }
+ * const fooObj = new Foo();
+ * const v1 = fooObj.anyMethod;
+ * isCallable(v1); // true
+ * 
+ * const v2 = Foo.otherMethod;
+ * isCallable(v2); // true
+ * 
+ * const v3 = function () {}
+ * isCallable(v3); // true
+ * 
+ * const v4 = function* generator(i) {};
+ * isCallable(v4); // true
+ * 
+ * const v5 = async function () {};
+ * isCallable(v5); // true
  */
 const isCallable = (value) => getType(value).endsWith('Function');
 

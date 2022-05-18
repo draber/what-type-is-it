@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>07.-HTML-Elements - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Return values</li><li class="nav-item"><a href="tutorial-01.-Basics.html">01. Basics</a></li><li class="nav-item"><a href="tutorial-02.-Strings.html">02. Strings</a></li><li class="nav-item"><a href="tutorial-03.-Numeric-Values.html">03. Numeric Values</a></li><li class="nav-item"><a href="tutorial-04.-Functions-and-Methods.html">04. Functions and Methods</a></li><li class="nav-item"><a href="tutorial-05.-Data-Collections.html">05. Data Collections</a></li><li class="nav-item"><a href="tutorial-06.-Classes-and-Instances.html">06. Classes and Instances</a></li><li class="nav-item"><a href="tutorial-07.-HTML-Elements.html">07. HTML Elements</a></li><li class="nav-item"><a href="tutorial-08.-SVG-Elements.html">08. SVG Elements</a></li><li class="nav-item"><a href="tutorial-09.-Math-Elements.html">09. Math Elements</a></li><li class="nav-item"><a href="tutorial-10.-Async-Functions-and-Promises.html">10. Async Functions and Promises</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getType">getType</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isArray">isArray</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isAsyncFunction">isAsyncFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isBigInt">isBigInt</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isBlob">isBlob</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isBoolean">isBoolean</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isCallable">isCallable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isCustomElement">isCustomElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isDate">isDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isElement">isElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isElementCollection">isElementCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isEmptyObject">isEmptyObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isError">isError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isFunction">isFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isGeneratorFunction">isGeneratorFunction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isHtmlElement">isHtmlElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isIterable">isIterable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isMap">isMap</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isMathElement">isMathElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isNull">isNull</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isNumber">isNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isPlainObject">isPlainObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isPromise">isPromise</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isRegExp">isRegExp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isSet">isSet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isString">isString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isSvgElement">isSvgElement</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isSymbol">isSymbol</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isUndefined">isUndefined</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isWeakMap">isWeakMap</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isWeakSet">isWeakSet</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">07. HTML Elements</h1>
+    
+
+    <section class="readme">
+
+<header>
+    
+</header>
+
+<article>
+    <p><em>Input value</em> refers to real DOM elements in this context.</p>
+<h2>Standard HTML Elements</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Input value</th>
+<th style="text-align:left">Return value</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;a&gt;</code></td>
+<td style="text-align:left"><code>HTMLAnchorElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;abbr&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;address&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;area&gt;</code></td>
+<td style="text-align:left"><code>HTMLAreaElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;article&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;aside&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;audio&gt;</code></td>
+<td style="text-align:left"><code>HTMLAudioElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;b&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;base&gt;</code></td>
+<td style="text-align:left"><code>HTMLBaseElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;bdi&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;bdo&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;blockquote&gt;</code></td>
+<td style="text-align:left"><code>HTMLQuoteElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;body&gt;</code></td>
+<td style="text-align:left"><code>HTMLBodyElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;br&gt;</code></td>
+<td style="text-align:left"><code>HTMLBRElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;button&gt;</code></td>
+<td style="text-align:left"><code>HTMLButtonElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;canvas&gt;</code></td>
+<td style="text-align:left"><code>HTMLCanvasElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;caption&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableCaptionElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;cite&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;code&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;col&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableColElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;colgroup&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableColElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;data&gt;</code></td>
+<td style="text-align:left"><code>HTMLDataElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;datalist&gt;</code></td>
+<td style="text-align:left"><code>HTMLDataListElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dd&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;del&gt;</code></td>
+<td style="text-align:left"><code>HTMLModElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;details&gt;</code></td>
+<td style="text-align:left"><code>HTMLDetailsElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dfn&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dialog&gt;</code></td>
+<td style="text-align:left"><code>HTMLDialogElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;div&gt;</code></td>
+<td style="text-align:left"><code>HTMLDivElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dl&gt;</code></td>
+<td style="text-align:left"><code>HTMLDListElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;dt&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;em&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;embed&gt;</code></td>
+<td style="text-align:left"><code>HTMLEmbedElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;fieldset&gt;</code></td>
+<td style="text-align:left"><code>HTMLFieldSetElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;figcaption&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;figure&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;footer&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;form&gt;</code></td>
+<td style="text-align:left"><code>HTMLFormElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;head&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;header&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h1&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h2&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h3&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h4&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h5&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;h6&gt;</code></td>
+<td style="text-align:left"><code>HTMLHeadingElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;hr&gt;</code></td>
+<td style="text-align:left"><code>HTMLHRElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;html&gt;</code></td>
+<td style="text-align:left"><code>HTMLHtmlElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;i&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;iframe&gt;</code></td>
+<td style="text-align:left"><code>HTMLIFrameElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;img&gt;</code></td>
+<td style="text-align:left"><code>HTMLImageElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;input&gt;</code></td>
+<td style="text-align:left"><code>HTMLInputElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;ins&gt;</code></td>
+<td style="text-align:left"><code>HTMLModElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;kbd&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;label&gt;</code></td>
+<td style="text-align:left"><code>HTMLLabelElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;legend&gt;</code></td>
+<td style="text-align:left"><code>HTMLLegendElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;li&gt;</code></td>
+<td style="text-align:left"><code>HTMLLIElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;link&gt;</code></td>
+<td style="text-align:left"><code>HTMLLinkElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;main&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;map&gt;</code></td>
+<td style="text-align:left"><code>HTMLMapElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;mark&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;menu&gt;</code></td>
+<td style="text-align:left"><code>HTMLMenuElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;meta&gt;</code></td>
+<td style="text-align:left"><code>HTMLMetaElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;meter&gt;</code></td>
+<td style="text-align:left"><code>HTMLMeterElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;nav&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;noscript&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;object&gt;</code></td>
+<td style="text-align:left"><code>HTMLObjectElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;ol&gt;</code></td>
+<td style="text-align:left"><code>HTMLOListElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;optgroup&gt;</code></td>
+<td style="text-align:left"><code>HTMLOptGroupElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;option&gt;</code></td>
+<td style="text-align:left"><code>HTMLOptionElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;output&gt;</code></td>
+<td style="text-align:left"><code>HTMLOutputElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;p&gt;</code></td>
+<td style="text-align:left"><code>HTMLParagraphElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;picture&gt;</code></td>
+<td style="text-align:left"><code>HTMLPictureElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;portal&gt;</code></td>
+<td style="text-align:left"><code>HTMLUnknownElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;pre&gt;</code></td>
+<td style="text-align:left"><code>HTMLPreElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;progress&gt;</code></td>
+<td style="text-align:left"><code>HTMLProgressElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;q&gt;</code></td>
+<td style="text-align:left"><code>HTMLQuoteElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;rp&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;rt&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;ruby&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;s&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;samp&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;script&gt;</code></td>
+<td style="text-align:left"><code>HTMLScriptElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;section&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;select&gt;</code></td>
+<td style="text-align:left"><code>HTMLSelectElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;slot&gt;</code></td>
+<td style="text-align:left"><code>HTMLSlotElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;small&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;source&gt;</code></td>
+<td style="text-align:left"><code>HTMLSourceElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;span&gt;</code></td>
+<td style="text-align:left"><code>HTMLSpanElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;strong&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;style&gt;</code></td>
+<td style="text-align:left"><code>HTMLStyleElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;sub&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;summary&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;sup&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;table&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;tbody&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableSectionElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;td&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableCellElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;template&gt;</code></td>
+<td style="text-align:left"><code>HTMLTemplateElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;textarea&gt;</code></td>
+<td style="text-align:left"><code>HTMLTextAreaElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;tfoot&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableSectionElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;th&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableCellElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;thead&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableSectionElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;time&gt;</code></td>
+<td style="text-align:left"><code>HTMLTimeElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;title&gt;</code></td>
+<td style="text-align:left"><code>HTMLTitleElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;tr&gt;</code></td>
+<td style="text-align:left"><code>HTMLTableRowElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;track&gt;</code></td>
+<td style="text-align:left"><code>HTMLTrackElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;u&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;ul&gt;</code></td>
+<td style="text-align:left"><code>HTMLUListElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;var&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;video&gt;</code></td>
+<td style="text-align:left"><code>HTMLVideoElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;wbr&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Custom HTML Elements</h2>
+<p><em>Input value</em> refers to real DOM elements in this context.</p>
+<pre class="prettyprint source lang-js"><code>class MyElement extends HTMLElement {}
+customElements.define(&quot;my-element&quot;, MyElement);
+
+const v1 = document.createElement(&quot;my-element&quot;);
+getType(v1) // &quot;MyElement&quot;
+isCustomElement(v1); // true
+isHtmlElement(v1); // true
+isElement(v1); // true
+
+// extending anything other than an HTML element (with &quot;is&quot;)
+class MyElement2 extends HTMLParagraphElement {}
+customElements.define(&quot;my-element2&quot;, MyElement2, { extends: 'p' });
+
+const v2 = document.createElement(&quot;my-element2&quot;);
+getType(v2) // &quot;HTMLElement&quot;
+isCustomElement(v1); // true
+isHtmlElement(v1); // true
+isElement(v1); // true
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Input value</th>
+<th style="text-align:left">Return value</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;my-element&gt;</code></td>
+<td style="text-align:left"><code>MyElement</code></td>
+<td style="text-align:left"><code>isCustomElement</code>, <code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+<tr>
+<td style="text-align:left">:---------------</td>
+<td style="text-align:left">:--------------------------</td>
+<td style="text-align:left">:----------------------------------------------------</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;my-element2&gt;</code></td>
+<td style="text-align:left"><code>HTMLElement</code></td>
+<td style="text-align:left"><code>isCustomElement</code>, <code>isHtmlElement()</code>, <code>isElement()</code></td>
+</tr>
+</tbody>
+</table>
+<h2>NodeList and HTMLCollection</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList"><code>NodeList</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> have a lot in common, but aren't exactly the same thing. If you need consistency between the two you can convert them to Arrays using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><code>Array.from()</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Input value</th>
+<th style="text-align:left">Return value</th>
+<th style="text-align:left">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>document.querySelectorAll('&lt;li&gt;')</code></td>
+<td style="text-align:left"><code>NodeList</code></td>
+<td style="text-align:left"><code>isElementCollection()</code>, <code>isIterable()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>document.forms</code></td>
+<td style="text-align:left"><code>HTMLCollection</code></td>
+<td style="text-align:left"><code>isElementCollection()</code>, <code>isIterable()</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Wed May 18 2022 20:28:55 GMT+0200 (Central European Summer Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

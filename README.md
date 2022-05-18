@@ -13,14 +13,14 @@
     1. `getType()` now returns values in a case sensitive manner. Using lower case in v1 was meant to be more consistent with the behavior of `typeof`, but it made it impossible to distinguish between `SomeObject` and `someobject`. 
     2. `getType({ foo: 'bar' })` now returns `PlainObject` rather than `object`. 
     3. `getType(function* ())` now returns `GeneratorFunction` instead of `generator`. 
-    4. `isGeneratorFunction()` replaces `isGenerator()`; the latter has been kept as an alias for backwards compatibility, but is no longer part of this documentation.
+    4. `isGeneratorFunction()` replaces `isGenerator()`.
     5. `getType()` now works around the [issue with `Function.name`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name#sect3) and returns the object type correctly. It will fall back to `Object` in the case of failure.
 
     If you're using  the `is<Type>()` functions only, your code will keep on working without any changes, except for the now fixed `Function.name` issue [5]. As for `getType()` you'll need to update your code with regards to the case sensitivity [1].
 
-- v2.1 adds a number of `is<Type>()` functions: `isAsyncFunction()`, `isBlob()`, `isIterable()`, `isPromise()`, `isWeakMap()` and `isWeakSet()`.
-- v2.2 introduces `isCallable()`. Not initiated classes are now reported as `Class` and no longer as `Function`. It also fixes some minor bugs from earlier versions, mainly in the documentation.
-- v2.3 removes `isFile()` again, because File objects and physical files aren't the same thing. This could have lead to wrong expectations and misunderstandings. v2.3 also adds more code examples.
+- v2.1 - v2.4 add more code examples a range of new `is<Type>()` functions; check out _Usage_ for a complete list.
+
+- v2.4 adds [reference tables](//whats-the-type.netlify.app/tutorial-01.-Basics.html) as a look-up for the return values of `getType()`.
 
 ## Installation
 
@@ -29,29 +29,40 @@ npm install whats-the-type
 ```
 
 ## Usage
-_What's the type_ comes with one generic detector, `getType()` and many `is<Type>()` functions:
+_What's the type_ comes with one generic detector, [`getType()`](https://whats-the-type.netlify.app/global.html#getType) and many `is<Type>()` functions:
 - [isArray()](//whats-the-type.netlify.app/global.html#isArray)                        
 - [isAsyncFunction()](//whats-the-type.netlify.app/global.html#isAsyncFunction)        
 - [isBigInt()](//whats-the-type.netlify.app/global.html#isBigInt)                      
 - [isBlob()](//whats-the-type.netlify.app/global.html#isBlob)                          
 - [isBoolean()](//whats-the-type.netlify.app/global.html#isBoolean)                    
-- [isCallable()](//whats-the-type.netlify.app/global.html#isCallable)              
-- [isDate()](//whats-the-type.netlify.app/global.html#isDate)                          
+- [isCallable()](//whats-the-type.netlify.app/global.html#isCallable) 
+- [isCustomElement()](//whats-the-type.netlify.app/global.html#isCustomElement)             
+- [isDate()](//whats-the-type.netlify.app/global.html#isDate)   
+- [isElement()](//whats-the-type.netlify.app/global.html#isElement)
+- [isElementCollection()](//whats-the-type.netlify.app/global.html#isElementCollection)
+- [isEmptyObject()](//whats-the-type.netlify.app/global.html#isEmptyObject)                       
 - [isError()](//whats-the-type.netlify.app/global.html#isError)                        
 - [isFunction()](//whats-the-type.netlify.app/global.html#isFunction)                 
 - [isGeneratorFunction()](//whats-the-type.netlify.app/global.html#isGeneratorFunction)
-- [isMap()](//whats-the-type.netlify.app/global.html#isMap)                            
+- [isHtmlElement()](//whats-the-type.netlify.app/global.html#isHtmlElement)
+- [isMap()](//whats-the-type.netlify.app/global.html#isMap) 
+- [isMathElement()](//whats-the-type.netlify.app/global.html#isMathElement)                           
 - [isNull()](//whats-the-type.netlify.app/global.html#isNull)                          
 - [isNumber()](//whats-the-type.netlify.app/global.html#isNumber)                      
 - [isPlainObject()](//whats-the-type.netlify.app/global.html#isPlainObject)            
 - [isPromise()](//whats-the-type.netlify.app/global.html#isPromise)                    
 - [isRegExp()](//whats-the-type.netlify.app/global.html#isRegExp)                      
 - [isSet()](//whats-the-type.netlify.app/global.html#isSet)                            
-- [isString()](//whats-the-type.netlify.app/global.html#isString)                      
+- [isString()](//whats-the-type.netlify.app/global.html#isString)   
+- [isSvgElement()](//whats-the-type.netlify.app/global.html#isSvgElement)                   
 - [isSymbol()](//whats-the-type.netlify.app/global.html#isSymbol)                      
 - [isUndefined()](//whats-the-type.netlify.app/global.html#isUndefined)                
 - [isWeakMap()](//whats-the-type.netlify.app/global.html#isWeakMap)                    
-- [isWeakSet()](//whats-the-type.netlify.app/global.html#isWeakSet)              
+- [isWeakSet()](//whats-the-type.netlify.app/global.html#isWeakSet) 
+
+### Importing
+
+You can import all functionality at once if you want to, but this means importing loads of things you won't need. Sure, treeshaking can make up for this but you can control things as well, the choice is yours.
     
 ```javascript
 // Import 'whats-the-type' if you have a bunch of different types to check. This imports all functions at once.
@@ -62,10 +73,11 @@ import getType from 'whats-the-type/getType.js';
 
 // use the `is<Type>` functions if you want to confirm if a value is of a specific type
 import isString from 'whats-the-type/isString.js';
+import isPlainObject from 'whats-the-type/isPlainObject.js';
 ```
 
 ### getType()
-`getType()` returns a string such as `Null`, `Undefined`, `Function`, `String`, etc. These values are case sensitive and mostly correspond to the constructor names. In other words, the function doesn't just return `object` for most types but is as precise as possible.
+`getType()` returns a string such as `Null`, `Undefined`, `Function`, `String`, etc. These values are case sensitive and mostly correspond to the constructor names. In other words, the function doesn't just return `object` for most types but is as precise as possible. If you are reading this at NPM, head over to the [full documentation](//whats-the-type.netlify.app) where you find reference tables with just about any possible return value.
 
 ```javascript
 // the detector always returns a string
@@ -121,17 +133,25 @@ getType(class CustomClass {}) // "Class", note the difference: CustomClass has n
 ```
 
 ### is&lt;Type&gt;()
-`is<Type>()` functions return `true` if the value is of the specified type.
+`is<Type>()` functions return `true` if the value is of the specified type. They exist for the most common types and are explained in the [full documentation](//whats-the-type.netlify.app).
 
 ```javascript
 isString('a'); // true
+
 isString(123); // false
+
 isPlainObject({ a: 1 }); // true
+
 isMap(new Map()); // true
+
 isCallable(() => {}); // true
+
 isAsyncFunction(async () => {}); // true
+
 isGeneratorFunction(function* () {}); // true
+
 isWeakMap(new WeakMap()); // true
+
 isWeakSet(new WeakSet()); // true
 ```
 
