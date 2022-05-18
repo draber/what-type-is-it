@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a map
+ * Check if a value is a Map
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

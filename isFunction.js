@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a function
+ * Check if a value is a Function
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

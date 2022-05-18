@@ -6,7 +6,7 @@
  */
 /**
  * More consistent variety of `typeof`. It returns a string such as `Null`, `Undefined`, `Function`, `String`, etc.
- * These values are case sensitive and mostly correspond to the constructor names.
+ * These values mostly correspond to the value's constructor names.
  * @param {*} value The value to check
  * @returns {String}
  * @example

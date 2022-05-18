@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a custom element
+ * Check if a value is either a NodeList or an HTMLCollection
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example 

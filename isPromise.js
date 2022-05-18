@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a promise
+ * Check if a value is a Promise
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

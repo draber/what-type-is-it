@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a bigint
+ * Check if a value is a BigInt
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

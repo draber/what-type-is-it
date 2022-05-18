@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a symbol
+ * Check if a value is a Symbol
  * @param {*} value The value to check
  * @returns {Boolean}
  */

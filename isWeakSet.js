@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a weak set
+ * Check if a value is a WeakSet
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a weak map
+ * Check if a value is a WeakMap
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

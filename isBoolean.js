@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a boolean
+ * Check if a value is a Boolean
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

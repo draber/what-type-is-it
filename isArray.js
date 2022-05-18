@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is an array
+ * Check if a value is an Array
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

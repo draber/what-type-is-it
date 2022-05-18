@@ -7,7 +7,7 @@
 import isUndefined from "./isUndefined.js";
 
 /**
- * Check if a value is an HTML element
+ * Check if a value is a Element
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

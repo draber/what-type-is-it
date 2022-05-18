@@ -7,7 +7,7 @@
 import getType from "./getType.js";
 
 /**
- * Check if a value is a blob
+ * Check if a value is a Blob
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example

@@ -7,7 +7,7 @@
  import getType from "./getType.js";
 
 /**
- * Check if a value is a AsyncFunction
+ * Check if a value is an AsyncFunction
  * @param {*} value The value to check
  * @returns {Boolean}
  * @example
