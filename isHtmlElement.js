@@ -16,6 +16,7 @@ import isElement from "./isElement.js";
  * 
  * class MyElement extends HTMLElement {}
  * customElement("my-element", MyElement);
+ * 
  * const v2 = document.createElement("my-element");
  * isHtmlElement(v2); // true
  */

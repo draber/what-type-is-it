@@ -13,8 +13,10 @@ import getType from "./getType.js";
  * @example
  * const v1 = [1, 2, 3];
  * isIterable(v1); // true 
+ * 
  * const v2 = new Map();
  * isIterable(v2); // true 
+ * 
  * const v3 = {};
  * isIterable(v3); // false
  */

@@ -13,6 +13,7 @@ import getType from "./getType.js";
  * @example
  * const v1 = /regexp/;
  * isRegExp(v2); // true
+ * 
  * const v3 = new RegExp("regexp", 'gi');
  * isRegExp(v3); // true
  */
