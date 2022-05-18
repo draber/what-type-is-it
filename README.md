@@ -8,7 +8,7 @@
 `typeof` returns `[object Object]` for almost everything beyond primitives. This module works around this drawback and returns a more accurate type. 
 
 ## What's new in v2?
-- v2 brings some improvements but also introduces a breaking change by going case sensitive. 
+- v2 brings some improvements but also introduces a breaking change by no longer returning its results in lower case. 
 
     1. `getType()` now returns values in a case sensitive manner. Using lower case in v1 was meant to be more consistent with the behavior of `typeof`, but it made it impossible to distinguish between `SomeObject` and `someobject`. 
     2. `getType({ foo: 'bar' })` now returns `PlainObject` rather than `object`. 
