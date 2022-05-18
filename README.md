@@ -62,7 +62,7 @@ _What's the type_ comes with one generic detector, [`getType()`](https://whats-t
 
 ### Importing
 
-You can import all functionality at once if you want to, but this means importing loads of things you won't need. Sure, treeshaking can make up for this but you can control things as well, the choice is yours.
+You can import all functionality at once if you want to, but this means importing loads of things you might not need. Sure, treeshaking can make up for this but you can control things as well, the choice is yours.
     
 ```javascript
 // Import 'whats-the-type' if you have a bunch of different types to check. This imports all functions at once.
@@ -77,7 +77,7 @@ import isPlainObject from 'whats-the-type/isPlainObject.js';
 ```
 
 ### getType()
-`getType()` returns a string such as `Null`, `Undefined`, `Function`, `String`, etc. These values are case sensitive and mostly correspond to the constructor names. In other words, the function doesn't just return `object` for most types but is as precise as possible. If you are reading this at NPM, head over to the [full documentation](//whats-the-type.netlify.app) where you find reference tables with just about any possible return value.
+`getType()` returns a string such as `Null`, `Undefined`, `Function`, `String`, etc. These values mostly correspond to the value's constructor name. In other words, the function doesn't simply return `object` for most types but is as precise as possible. If you are reading this at NPM, head over to the [full documentation](//whats-the-type.netlify.app) to find reference tables with just about any possible return value.
 
 ```javascript
 // the detector always returns a string
@@ -133,7 +133,7 @@ getType(class CustomClass {}) // "Class", note the difference: CustomClass has n
 ```
 
 ### is&lt;Type&gt;()
-`is<Type>()` functions return `true` if the value is of the specified type. They exist for the most common types and are explained in the [full documentation](//whats-the-type.netlify.app).
+`is<Type>()` functions return `true` if the value is of the specified type. They exist for the most common types and are explained in the [docs](//whats-the-type.netlify.app).
 
 ```javascript
 isString('a'); // true
